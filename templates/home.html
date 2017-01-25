@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>{{name}} home page</title>
+</head>
+<body>
+    <center>
+        
+    {% set count = 0 %}
+    <table border=1>
+        <tr>
+            <td>index</td>
+            <td>bookmark</td>
+        </tr>
+        {% for o in bmarks %}
+        
+        <tr>
+            <th>{{o['index']}}</th>
+            <th><a href="{{o['content']}}">{{o['label']}} </a></th>
+        </tr>
+        {% endfor %}
+        
+        
+            
+    </table>
+    
+    </br>
+    </br>
+    <table border=0>
+        
+        <tr>
+            <td><a href="addbm">add one</a></td>
+            
+        </tr>
+        <tr>
+            <td><a href="bmarkm">manager bookmark</a></td>
+        </tr>
+        
+        <tr>
+            &nbsp;
+        </tr>
+        <tr>
+            <a href="logout">logout</a>
+        </tr>
+        
+    </table>
+<!--    <a href="logout">logout</a>-->
+
+    </center>
+</body>
+</html>
