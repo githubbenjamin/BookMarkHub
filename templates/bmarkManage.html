@@ -1,0 +1,37 @@
+<html>
+    <head>
+    <title>{{user}} bookmark manager</title>
+</head>
+<body>
+
+<center>
+    <h3>manager bookmark</h3>
+    
+        <table width="300" height="70" border="0">
+            <tr>
+                <td width="20">Index</td>
+                <td width="60">Label</td>
+                <td width="120">Address</td>
+                <td width="20">Delete</td>
+<!--                <td>Submit</td>-->
+            </tr>
+            
+            {% for i in bookmarks %}
+            <form action="/bmarkm" method="POST">
+            <tr>
+                <input type='hidden' name='id'/ value='{{i['id']}}'>
+                <td><input type='text' name='index' value='{{i['index']}}' readonly="readonly"/></td>
+                <td><input type='text' name='label' value='{{i['label']}}'/></td>
+                <td><input type='text' name='address' value='{{i['content']}}'/></td>
+                <td><input type='checkbox' name='delete' /></td>
+                <td><input type='submit' value='Submit'/></td>
+                
+            </tr>
+            </form>
+            {% endfor %}
+            
+</center>
+
+
+</body>
+</html>
