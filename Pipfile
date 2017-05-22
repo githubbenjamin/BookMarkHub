@@ -4,4 +4,6 @@ verify_ssl = true
 
 [packages]
 flask = "*"
+flask_script = "*"
 pymysql = "*"
+flask_restful = "*"
