@@ -1,0 +1,9 @@
+[[source]]
+url = "https://pypi.org/"
+verify_ssl = true
+
+[packages]
+flask = "*"
+flask_script = "*"
+pymysql = "*"
+flask_restful = "*"
